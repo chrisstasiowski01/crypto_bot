@@ -22,7 +22,7 @@ authorized = mt5.login(account_number)
 if authorized:
     print(f'CONNECTED TO ACCOUNT #{account_number}')
 else:
-    print(f'FAILED TO CONNECT TO ACCOUNT #{account_number}, ERROR CODE: {mt5.last_error()}'
+    print(f'FAILED TO CONNECT TO ACCOUNT #{account_number}, ERROR CODE: {mt5.last_error()}')
 
 # store equity of account
 account_info = mt5.account_info()
@@ -106,7 +106,7 @@ def trade():
                     'type': ORDER_TYPE,
                     'price': price,
                     'sl': stop,
-                    'tp': sell
+                    'tp': sell,
                     'magic': 66,
                     'comment': 'python-buy',
                     'type_time': mt5.ORDER_TIME_GTC,
@@ -137,7 +137,7 @@ def trade():
         else:
             print(f'difference is only: {str(difference)}% trying again...')
 
-if __name__ = '__main__':
+if __name__ == '__main__':
     print('Press Ctrl-C to stop.')
     for i in count():
         trade()
